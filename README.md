@@ -1,3 +1,4 @@
+![ci](https://github.com/chalkan3/worker-sync/workflows/ci/badge.svg)
 # Gopher Company 
 ![alt text](http://cdn.attackofthecute.com/April-03-2012-23-37-11-tumblrlyvrxk0z5U1qa9omho1500.jpg)
 
