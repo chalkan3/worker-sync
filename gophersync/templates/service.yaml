@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "gophersync.fullname" . }}
+  labels:
+    {{- include "gophersync.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: 9090
+      targetPort: http
+      protocol: TCP
+      name: http
+      targetPort: 9090
+  selector:
+    {{- include "gophersync.selectorLabels" . | nindent 4 }}
