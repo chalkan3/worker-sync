@@ -1,6 +1,8 @@
 package infra
 
 import (
+	"os"
+
 	linq "github.com/ahmetb/go-linq"
 	"o2b.com.br/WhatsAppProcessWorker/domain"
 
@@ -55,6 +57,9 @@ func (mq *RabbitMQ) declareQueue(queueName string) (*amqp.Queue, *amqp.Channel) 
 
 }
 func (mq *RabbitMQ) formatAmpqURI() string {
+	if mq.Host == "" {
+		mq.Host = os.Getenv("rabbitmq_host")
+	}
 	return "amqp://" + mq.User + mq.Password + "@" + mq.Host
 
 }
