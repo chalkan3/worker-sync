@@ -3,7 +3,7 @@
         "user": "user",    
         "password": "C0oj8GC9Fm",    
         "port": "5672",         
-        "host": "gopher-company-rabbitmq.gopher-company-shared.svc.cluster.local",
+        "host": "",
         "queue": [
             {
                 "name": "sync",
