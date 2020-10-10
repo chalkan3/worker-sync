@@ -35,7 +35,7 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
             - name: rabbitmq_host
-              value: gopher-company-rabbitmq.gopher-company-shared.svc.cluster.loc
+              value: gopher-company-rabbitmq.gopher-company-shared.svc.cluster.local
           ports:
             - name: http
               containerPort: 80
